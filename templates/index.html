@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../static/index.css" rel="stylesheet">
+  <script src="../static/script.js" defer></script>
+  <title>Urdu News Clustering</title>
+</head>
+<style>
+  @font-face {
+    font-family: 'UrduFont';
+    src: url('path/to/urdu-font.ttf');
+  }
+  
+  body {
+    font-family: 'UrduFont', Arial, sans-serif;
+  }
+</style>
+<body>
+  <div id="page">
+
+
+    <!-- <div id="open-modal" class="modal-window">
+      <div>
+        <a href="#" title="Close" class="modal-close">Close</a>
+        <h1>CrickReview Search Engine</h1>
+        <div><small><b>Introducing CrickReview Search Engine, a powerful search tool based on the Vector Space model. This innovative engine enables users to input Boolean expressions and receive a list of relevant documents from a pre-defined list of 30 documents.</b></small></div>
+        <br>
+        <div><b>Check out Rules👇</b></div>
+        <ul>
+          <li>Capitalized Boolean operators (AND, OR, NOT) must be used to compose the query.</li>
+          <li>Every token, Boolean operator, and proximity query (indicated by '/k') must be separated by a space.</li>
+          <li>Ensure that brackets are properly used in complex queries to obtain accurate results.</li>
+          <li>Remember to leave gaps between brackets, Boolean operators, and query terms.</li>
+          <li>The CrickReview Search Engine supports Boolean queries, phrasal queries, and proximity queries.</li>
+          <ul>
+            <b>List of some sample queries:</b>
+            <ul><b>Boolean Query</b>
+              <li>pakistan AND psl</li>
+              <li>india OR pakistan OR cricket</li>
+              <li>NOT t20</li>
+              
+            </ul>
+            <ul><b>Phrasal Query</b>
+              <li>rohit sharma</li>
+              <li>impossible</li>
+              <li>red ball cricket</li>
+            </ul>
+            <ul><b>Proximity Query</b>
+              <li>main bowlers /2</li>
+              <li>batters boundary /4</li>
+            </ul>
+            <ul><b>Complex Boolean Query</b>
+              <li>NOT ( india OR pakistan )</li>
+              <li>( NOT ( india OR pakistan ) ) AND ( psl OR t20 )</li>
+              <li>( psl AND cricket ) OR ( india OR pakistan )</li>
+            </ul>
+          </ul>
+        </ul>
+      </div>
+    </div> -->
+    <div class="logo-container">
+      <!-- <div class="container">
+        <div class="interior">
+          <a class="btn" href="#open-modal">👋 <b>Search Engine Rule Book</b></a>
+        </div>
+      </div> -->
+      <img class="logo" src="../static/img/mainlogo.png">
+    </div>
+
+
+    <!-- <form action="/evalexpression" method="POST">
+      <label for="expression">Search:</label>
+      <input type="text" id="expression" name="expression">
+      <button type="submit">Search</button>
+    </form>
+    {% if answer is defined %}
+      <p>The documents relevant for query are : </p>
+      {% for doc in answer %}
+          <p>{{doc}}</p>
+      {% endfor %}
+    {% endif %} -->
+
+
+
+
+    <form action="/evalexpression" id="searchForm" method="POST">
+      <fieldset>
+        <input id="s" type="text" name="expression" dir="rtl"/>
+        <input type="submit" id="submitButton" />
+      </fieldset>
+    </form>
+    <div id="resultsDiv"></div>
+    <!-- {% if answer is defined %}
+      {% if answer == 'empty query'%}
+        <div id="resultsDiv">Note: Query Field Cannot be empty</div>
+      {% else %} 
+        <p>The documents relevant for query are : </p>
+        {% for doc in answer %}
+          <div id="resultsDiv">{{doc}}</div>
+        {% endfor %}
+      {% endif %}
+    {% endif %} -->
+
+
+  </div>
+
+  
+</body>
+
+</html>

@@ -1,0 +1,411 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-size:13px;
+	color:#eee;
+	font-family:Arial, Helvetica, sans-serif;
+	/* background:url('img/5205447.jpg') repeat-x #718693; */
+    background:url('img/bgimage.jpg') no-repeat center center fixed #718693;
+    background-size: cover;
+}
+
+#page{
+	/* The main container div */
+	width:620px;
+	margin:100px auto 0;
+}
+
+/* h1{
+	font-family:Corbel,'Myriad Pro',Arial, Helvetica, sans-serif;
+	background:url('img/mainlogo.png') no-repeat center top;
+	text-indent:-9999px;
+	overflow:hidden;
+	height:90px;
+} */
+
+.logo{
+	height:300px;
+	width: 300px;
+}
+
+.logo-container{
+	text-align: center;
+	margin-top: -140px;
+}
+
+
+#searchForm{
+	/* The search form. */
+	/* background-color:#4C5A65; */
+	padding:50px 50px 30px;
+	margin:-40px 0;
+	position:relative;
+    background-color: rgba(255,255,255,0.2);
+	-moz-border-radius:16px;
+	-webkit-border-radius:16px;
+	border-radius:16px;
+}
+
+fieldset{
+	border:none;
+}
+
+#searchInputContainer{
+	/* This div contains the transparent search box */
+	width:420px;
+	height:36px;
+	background:url("img/searchBox.png") no-repeat;
+	float:left;
+	margin-right:12px;
+}
+
+#s{
+	/* The search text box. */
+	
+	border:none;
+	color:#888888;
+	background:url("img/searchBox.png") no-repeat;
+	
+	float:left;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:15px;
+	height:36px;
+	line-height:36px;
+	margin-right:12px;
+	outline:medium none;
+	padding:0 0 0 35px;
+	text-shadow:1px 1px 0 white;
+	width:385px;
+}
+
+/* The UL that contains the search type icons */
+
+.icons{
+	list-style:none;
+	margin:10px 0 0 335px;
+	height:19px;
+	position:relative;
+}
+
+.icons li{
+	background:url("img/icons.png") no-repeat;
+	float:left;
+	height:19px;
+	text-indent:-9999px;
+	cursor:pointer;
+	margin-right:5px;
+}
+
+/* Styling each icon */
+
+li.web{ width:15px;}
+li.web.active,
+li.web:hover{ background-position:left bottom;}
+
+li.images{ width:22px; background-position:-18px 0;}
+li.images.active,
+li.images:hover{ background-position:-18px bottom;}
+
+li.news{ width:14px; background-position:-44px 0;}
+li.news.active,
+li.news:hover{ background-position:-44px bottom;}
+
+li.videos{ width:17px; background-position:right 0;}
+li.videos.active,
+li.videos:hover{ background-position:right bottom;}
+
+span.arrow{
+	/* The little arrow that moves below the icons */
+	
+	width:11px;
+	height:6px;
+	margin:21px 0 0 5px;
+	position:absolute;
+	background:url('img/arrow.png') no-repeat;
+	left:0;
+}
+
+
+/* The submit button */
+
+
+#submitButton{
+	background:url('img/buttons.png') no-repeat;
+	width:83px;
+	height:36px;
+	text-indent:-9999px;
+	overflow:hidden;
+	text-transform:uppercase;
+	border:none;
+	cursor:pointer;
+}
+
+#submitButton:hover{
+	background-position:left bottom;
+}
+
+
+/* The Search tutorialzine.com / Search the Web radio buttons */
+
+
+#searchInContainer{
+	float:left;
+	margin-top:12px;
+	width:330px;
+}
+
+label{
+	color:#DDDDDD;
+	cursor:pointer;
+	font-size:11px;
+	position:relative;
+	right:-2px;
+	top:-2px;
+	margin-right:10px;
+	white-space:nowrap;
+	/*float:left;*/
+}
+
+input[type=radio]{
+	cursor:pointer;
+	/*float:left;*/
+}
+
+
+/* Styling the search results */
+
+
+.pageContainer{
+	/* Holds each page with search results. Has an inset bottom border. */
+	border-bottom:1px solid #5e7481;
+	margin-bottom:50px;
+	
+	/* Adding a dark bottom border with box shadow */
+	
+	-moz-box-shadow:0 1px 0 #798e9c;
+	-webkit-box-shadow:0 1px 0 #798e9c;
+	box-shadow:0 1px 0 #798e9c;
+}
+
+
+.notFound{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out 0s;
+    /* background-color: #4C5A65; */
+    background-color: rgba(255,255,255,0.2);
+    padding: 20px 20px 20px 15px;
+    margin: -60px 0;
+    /* position: relative; */
+    /* -moz-border-radius: 16px; */
+    /* -webkit-border-radius: 16px; */
+    border-radius: 16px;
+    font-size: 20px;
+	text-align:center;
+	margin-top: 0px;
+	color: black;
+}
+
+
+/* Web & news results */
+
+
+.webResult{ text-shadow:1px 1px 0 #586a75;margin-bottom:5px;}
+.webResult h2{ 
+    background-color: rgba(0,0,0,0.2);
+    /* background-color: #5D6F7B; */
+    font-size: 18px;
+    font-weight: normal;
+    padding: 10px 40px;
+    width: 515px;
+    height: auto;
+    /* display: inline-block; */
+    margin-right: 10px;
+    margin-bottom: 10px;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    border-radius: 18px;
+    float: left;
+    color: black;
+
+
+	/* Applying CSS3 rounded corners */
+	-moz-border-radius:18px;
+	-webkit-border-radius:18px;
+	border-radius:18px;
+}
+.webResult h2 b{ color:#fff; }
+.webResult h2 a{ color:#eee;border:none;}
+.webResult p{ line-height:1.5;padding:15px 20px;}
+.webResult p b{ color:white;}
+.webResult > a{ margin-left:20px;}
+
+
+/* Image & video search results */
+
+
+.imageResult{
+	float:left;
+	height:180px;
+	margin:0 0 20px 40px;
+	text-align:center;
+	width:152px;
+	overflow:hidden;
+}
+.imageResult img{ display:block;border:none;}
+.imageResult a.pic{
+	border:1px solid #fff;
+	outline:1px solid #777;
+	display:block;
+	margin:0 auto 15px;
+}
+
+/* The show more button */
+
+#more{
+	width:83px;
+	height:24px;
+	background:url('img/more.png') no-repeat;
+	cursor:pointer;
+	margin:40px auto;
+}
+
+#more:hover{
+	background-position:left bottom;
+}
+
+
+
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	/* border-bottom:1px dotted #97cae6; */
+	color:black;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+a:hover{
+	/* border-bottom:1px dashed transparent; */
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.clear{
+	clear:both;
+}
+
+#documentheading{
+    margin-bottom: 10px;
+    color: black;
+}
+
+#resultsDiv{
+    margin-top: 60px;
+}
+
+
+
+
+
+/* modal */
+
+.modal-window {
+	position: fixed;
+	background-color: rgba(255, 255, 255, 0.25);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s;
+}
+.modal-window:target {
+	visibility: visible;
+	opacity: 1;
+	pointer-events: auto;
+}
+.modal-window > div {
+	width: 400px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 2em;
+	background: white;
+	color: black;
+}
+.modal-window header {
+	font-weight: bold;
+}
+.modal-window h1 {
+	font-size: 150%;
+	margin: 0 0 15px;
+}
+.modal-close {
+	color: #aaa;
+	line-height: 50px;
+	font-size: 15px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	width: 70px;
+	text-decoration: none;
+}
+.modal-close:hover {
+	color: black;
+}
+/* Demo Styles */
+/* html, body {
+	height: 100%;
+} */
+/* html {
+	font-size: 18px;
+	line-height: 1.4;
+} */
+/* body {
+	font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-weight: 600;
+	background-image: linear-gradient(to right, #7f53ac 0, #657ced 100%);
+	color: black;
+} */
+a {
+	color: inherit;
+	text-decoration: none;
+}
+.container {
+	display: inline;
+	/* justify-content: center;
+	align-items: center;
+	height: 100vh; */
+	position: absolute;
+	top: 3%;
+	right: 1%;
+}
+.modal-window > div {
+	border-radius: 1rem;
+}
+.modal-window div:not(:last-of-type) {
+	margin-bottom: 15px;
+}
+/* .logo {
+	max-width: 150px;
+	display: block;
+} */
+/* small {
+	color: lightgray;
+} */
+.btn {
+	background-color: rgb(255,255,255,0.3);
+	padding: 1em 1.5em;
+	border-radius: 0.5rem;
+	text-decoration: none;
+}
+.btn i {
+	padding-right: 0.3em;
+}
